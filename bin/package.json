@@ -1,0 +1,9 @@
+{
+	"name": "Browser - Light",
+	"main": "../app/index.html",
+	"description": "A Light weight desktop browser app",
+	"version": "0.1.0",
+	"window": {
+		"toolbar": false
+	}
+}
