@@ -2,9 +2,38 @@
 <head>
     <title>Browser</title>
     <link rel="stylesheet" type="text/css" href="css/window.css">
+    <style type="text/css">
+    header.header-bar {
+        width: 100%;
+        height: 6%;
+        max-height: 50px;
+        min-height: 50px;
+        background: #f1f1f1;
+    }
+
+    header .navigation-bar {
+
+    }
+    </style>
 </head>
 <body>
-    <div></div>
+    <header class="header-bar">
+        <div class="navigation-bar">
+            <button onclick="
+                document.querySelector('.tab-window').contentDocument.location.reload(document.querySelector('.tab-window').getAttribute('src'))
+            ">&#8635</button>
+            <div class="icons-combo">
+                <span class="icon">&#128269;</span>
+                <input type="text" class="omnibox" name="omnibox" value="" placeholder="Type your address here ...">
+                <button onclick=
+                "document.querySelector('.tab-window').contentDocument.location.href = 'http://' + document.querySelector('.omnibox').value;
+                ">GO</button>
+            </div>
+        </div>
+    </header>
     <iframe class="tab-window" src="http://www.google.com"></iframe>
+    <script type="text/javascript">
+    console.log(document.querySelector('.tab-window').contentDocument);
+    </script>
 </body>
 </html>
